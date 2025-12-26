@@ -131,6 +131,5 @@
 - 500 Internal Server Error
 
 # 👨‍💻 Author
-
-## Saurabh Manohar
-### Full Stack Developer
+- Saurabh Manohar
+- Full Stack Developer

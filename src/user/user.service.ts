@@ -15,7 +15,7 @@ export class UserService {
             if (userExists) {
                 throw new ConflictException('User already exists');
             }
-            const hashPswrd = await bcrypt.hash(user['password'],10);
+            const hashPswrd = await bcrypt.hash(user['password'],Number(process.env.SALT_ROUNDS));
             user['userId'] = uuidv7();
             user['password'] = hashPswrd;
             user['createdAt'] = new Date();

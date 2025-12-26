@@ -58,13 +58,13 @@
 
 # ✅ Task APIs (CRUD)
 
-    Each task is:
+- Each task is:
 
     Created by a specific user
 
     Linked to the creator using MongoDB ObjectId reference
 
-    Supported operations:
+- Supported operations:
 
     Create task
 
@@ -74,6 +74,63 @@
 
     Delete task (only creator allowed)
 
-    Authorization rule:
+- Authorization rule:
 
     A task can be deleted or updated only if the task ID and creator ID match
+
+# 🔐 Authentication & Authorization
+## JWT Authentication
+
+- JWT tokens generated on login
+
+- Tokens contain:
+
+    - sub → userId
+
+    - role → user role
+
+## Role-Based Access Control
+
+    - Routes protected using JWT Guards
+
+    - Role checks implemented using custom decorators
+
+    - Example roles:
+
+        - admin
+
+        - user
+# 🛡️ Security Measures
+
+- Helmet added globally for secure HTTP headers
+
+- JWT expiration configured
+
+- Protected routes using Guards
+
+- No sensitive data exposed in responses
+
+- Environment variables managed securely
+
+# 🧪 Error Handling
+
+- Uses NestJS built-in exceptions
+
+- Centralized error handling via global filters
+
+- Proper HTTP status codes:
+
+- 201 Created
+
+- 401 Unauthorized
+
+- 403 Forbidden
+
+- 409 Conflict
+
+- 500 Internal Server Error
+
+# 👨‍💻 Author
+
+## Saurabh Manohar
+### Full Stack Developer
